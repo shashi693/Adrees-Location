@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:ads="http://schemas.android.com/apk/res-auto"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/activity_main"
+              android:padding="0dp"
+              android:layout_margin="0dp"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.avenueinfotech.yourlocationaddress.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="29dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/address"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_dark"
+                android:onClick="lables"
+                android:text="@string/address"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/addresstxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorText"
+                android:hint="Click to get your current Address"
+                android:textSize="12dp"
+                android:textStyle="bold|italic"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:layout_alignBottom="@+id/editText"
+            android:orientation="horizontal"
+            android:padding="0dp"
+            android:layout_toRightOf="@+id/editText"
+            android:layout_toEndOf="@+id/editText">
+
+            <Button
+                android:id="@+id/satellite"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_light"
+                android:elevation="1dp"
+                android:padding="0dp"
+                android:paddingBottom="0dp"
+                android:paddingEnd="0dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:paddingStart="0dp"
+                android:paddingTop="0dp"
+                android:text="@string/satellite"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/normal"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:background="?android:attr/colorPressedHighlight"
+                android:padding="0dp"
+                android:paddingBottom="0dp"
+                android:paddingEnd="0dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:paddingStart="0dp"
+                android:paddingTop="0dp"
+                android:text="@string/normal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <!--<View-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:background="#E8EAF6"/>-->
+
+    <fragment
+        android:id="@+id/map"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.96"/>
+
+
+    <!--<fragment-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:name="com.google.android.gms.maps.MapFragment"-->
+    <!--android:id="@+id/mapFragment"-->
+    <!--android:layout_weight="0.95" />-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- view for AdMob Banner Ad -->
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/wifiimg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                >
+
+                <LinearLayout
+                    android:id="@+id/wifitext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="0.5dp"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:srcCompat="@drawable/wifi27"
+                        />
+
+                    <TextView
+                        android:id="@+id/wifistatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wifi On"
+                        android:textColor="@color/colorwifi"
+                        android:textSize="10sp"/>
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="195dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_toEndOf="@+id/wifitext"
+                    android:layout_toRightOf="@+id/wifitext"
+                    android:scrollbars="vertical"
+
+
+                    android:text="Ko Pha Ngan, Thailand"
+                    android:textSize="13dp"/>
+
+                <Button
+                    android:id="@+id/button"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="60dp"
+
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignTop="@+id/editText"
+                    android:layout_toEndOf="@+id/editText"
+                    android:layout_toRightOf="@+id/editText"
+
+
+                    android:onClick="geoLocate"
+                    android:text="Go"/>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="end"
+
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
